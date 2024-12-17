@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <!--
+  <head>
+    <!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.
 
@@ -14,31 +14,42 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="/web/">
+    <base href="$FLUTTER_BASE_HREF" />
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="학술제에 제출된 학술 보고서들을 검색하고 알아볼 수 있는 프로그램">
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta
+      name="description"
+      content="학술제에 제출된 학술 보고서들을 검색하고 알아볼 수 있는 프로그램"
+    />
 
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="2024 학술제">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+    <!-- iOS meta tags & icons -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="2024 학술제" />
+    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
 
-  <title>2024 학술제</title>
-  <link rel="manifest" href="manifest.json">
-</head>
-<body>
-  <script>
-    (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
-      key: "AIzaSyBr_TbJhd6s0RKi8XJpKoa-Fg98XE0SGIk",
-      v: "weekly",
-    });
-  </script>
-  <script src="flutter_bootstrap.js" async></script>
-</body>
+    <title>2024 학술제</title>
+    <link rel="manifest" href="manifest.json" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBr_TbJhd6s0RKi8XJpKoa-Fg98XE0SGIk"></script>
+  </head>
+  <body>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyBMgc0wKa4lIoPqnO9bqgMgPl_11cC1bEA",
+        authDomain: "haksul-firestore.firebaseapp.com",
+        projectId: "haksul-firestore",
+        storageBucket: "haksul-firestore.firebasestorage.app",
+        messagingSenderId: "991387993349",
+        appId: "1:991387993349:web:9369331d4e0ba03e58e36c",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="flutter_bootstrap.js" async></script>
+  </body>
 </html>
