@@ -37,6 +37,11 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBr_TbJhd6s0RKi8XJpKoa-Fg98XE0SGIk"></script>
   </head>
   <body>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script type="text/javascript">
+      pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "//cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js";
+    </script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script>
       const firebaseConfig = {
